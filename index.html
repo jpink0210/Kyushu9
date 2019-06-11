@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<div id="app">
+		<h2>九州</h2>
+		<div class="container-fluid">
+			<div class="row rh">
+				<button class="btn btn-primary col-2" @click="changeDay(0)">6/18</button>
+				<button class="btn btn-primary col-2" @click="changeDay(1)">6/19</button>
+				<button class="btn btn-primary col-2" @click="changeDay(2)">6/20</button>
+				<button class="btn btn-primary col-2" @click="changeDay(3)">6/21</button>
+				<button class="btn btn-primary col-2" @click="changeDay(4)">6/22</button>
+			</div>
+			 
+			<div class="row">
+		
+
+			</div>
+			<div class="row">
+					<div class="col-12">
+					
+					<div class="row" v-for="todo in all[chosen].timetails">
+						<div class="col-2" v-text="todo.time"></div>
+						<div class="col-8 wb">
+							<div v-for="one in todo.sth">
+								<a v-if="one.includes('http')" target="_blank" :href="one">link</a>
+
+								<p v-else v-text="one"></p>
+							</div>
+						</div>
+						<div class="col-2" v-if="!isNaN(todo.cost)">
+							<p v-if="todo.cost > 0" v-text="todo.cost"></p>
+							<p v-else></p>
+						</div>
+						<div class="col-2" v-else>
+							<a target="_blank" :href="'http://maps.google.com/?q=' + todo.cost">map</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+				
+		</div>
+	</div>
+	<script src="https://vuejs.org/js/vue.min.js"></script>
+	<script type="text/javascript" src="./index.js"></script>
+</body>
+
+
+</html>
+
