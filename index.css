@@ -4,6 +4,8 @@
 	padding-top: 20px;
 	max-width: 400px;
 	border: 1px solid #000;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 h2 {
@@ -23,6 +25,16 @@ h2 {
 	position: relative;
 	right: 0;
 }
+.rh {
+	width: 100%;
+	text-align: center;
+}
 .rh button {
-	margin: 0 5px;
+	padding: 5px 1px;
+	margin: 0 2px;
+}
+
+.row.content {
+	height: calc(100vh - 130px);
+	overflow-y: auto;
 }
