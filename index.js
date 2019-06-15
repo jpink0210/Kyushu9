@@ -10,6 +10,7 @@ var app = new Vue({
 				date: "6/18",
 				wk: "（二）",
 				timetails: [
+					{ time: "",sth: ["台灣->博多"],cost: 0,},
 					{ time: "04:30",sth: ["機場接送"],cost: 0, },
 					{ time: "05:00",sth: ["報到掛行李","第一行廈seven領wifi機","吃早餐"],cost: 0, },
 					{ time: "06:45",sth: ["起飛"],cost: 0, },
@@ -64,6 +65,7 @@ var app = new Vue({
 				date: "6/19",
 				wk: "（三）",
 				timetails: [
+					{ time: "",sth: ["博多-2hr->長崎"],cost: 0,},
 					{ time: "08:00",sth: ["早餐"],cost: 700, },
 					{ time: "09:00",sth: ["時代租車博多車站博多口店取車"],cost: 9130, },
 					{ time: "11:00",sth: ["JR長崎車站購買一日電車券"],cost: 500, },
@@ -126,6 +128,7 @@ var app = new Vue({
 				date: "6/20",
 				wk: "（四）",
 				timetails: [
+					{ time: "",sth: ["長崎-3hr->熊本"],cost: 0,},
 					{ time: "08:00",sth: ["早餐"],cost: 700,},
 					{ time: "09:00",sth: ["取車出發往柳川免費停車場 ","No. 1 Free Parking (Tachibana Street) Mitsuhashimachi Fujiyoshi 536-7 (MAPCODE: 69 875 543*27)"],cost: 0,},
 					{ time: "11:00",sth: ["柳川觀光案內短程游船10分鐘(option)","https://matcha-jp.com/tw/4888	100"],cost: 0,},
@@ -166,6 +169,7 @@ var app = new Vue({
 				date: "6/21",
 				wk: "（五）",
 				timetails: [
+					{ time: "",sth: [" 熊本到-1.5hr->","湯布院-0.5hr->","別府"],cost: 0,},
 					{ time: "08:00",sth: ["早餐"],cost: 0,},
 					{ time: "09:00",sth: ["出發往由布院Mapcode:","269 358 434*71"],cost: 0,},
 					{ time: "11:00",sth: ["搶購有名的瑞士捲蛋糕？B Speak(店旁邊有6個停車場）","可以把車停在金鱗湖附近比較便宜Mapcode: ","269 359 527*28","簡易逛街地圖 ","https://gojp.tw/2017-01-30-237/","午餐推薦：蕎麥麵","http://niny.tw/2016-10-21-258/"],cost: 0,},
@@ -175,9 +179,23 @@ var app = new Vue({
 				],
 				plays: [
 					{
-						place: "",
+						place: "由布院",
 						views:[
-							{where: "", ctn: "" , link:"", cmmt:"", img:""},
+							{where: "由布見通", ctn: "" , link:"https://tw.bring-you.info/yufuin", cmmt:"", img:"https://tw.bring-you.info/imgs/2017/12/yufuin-31.jpg"},
+							{where: "湯之坪街道", ctn: "從「由布見通」一路逛往金鱗湖方向，到由布院最熱鬧的「湯之坪街道」步行約莫15分鐘，沿途有B speak、YURARI 以及花麹菊家等由布院特色名產小店可以逛，路上小溪與山岳風景非常漂亮。" , link:"", cmmt:"感覺這條街真的是好逛", img:"https://tw.bring-you.info/imgs/2017/12/yufuin-55.jpg"},
+							{where: "湯布院童話村", ctn: "" , link:"", cmmt:"(湯之坪街道)", img:"https://tw.bring-you.info/imgs/2017/12/Kyushu-feature-48.jpg"},
+							{where: "手製日式蕎麥麵", ctn: "好不容易看到有人介紹「古式手打そば 泉」這間，裡面的蕎麥麵也非常推薦，地點也剛好在我們會去的金鱗湖附近就決定在湯布院的午餐就來這裡吃了!!" , link:"http://niny.tw/2016-10-21-258/", cmmt:"", img:"http://img.niny.tw/pixnet/8e3e3d28184ff3a7f8f01c0aa8b1076e.jpg"},
+							{where: "豊後牛(ぶんごぎゅう)以及「釜飯三吃」", ctn: "最著名的 3 種招牌料理，分別為鰻魚釜飯、豊後牛釜飯及地雞釜飯(早上 11 點到下午 4點、晚上 5 點半至 9 點)" , link:"", cmmt:"", img:"https://tw.bring-you.info/imgs/2017/11/yufu-mabushi-12.jpg"},
+							{where: "金鱗湖", ctn: "" , link:"", cmmt:"", img:"https://tw.bring-you.info/imgs/2017/12/yufuin-63.jpg"},
+						]
+					},
+					{
+						place: "別府",
+						views:[
+							{where: "七大地獄", ctn: " 海地獄:八大地獄最大的，泉水是由具硫酸鐵鐳的鹽酸和泉所組成，呈現如大海般的湛藍色。血地獄:泉水富含氧化鐵，小小的池看起來宛如血池。坊主地獄:會冒出泥漿溫泉與地熱氣。龍卷地獄:每半小時噴發一次的間歇泉。灶地獄:泥巴溫泉，內有六個不同的池塘。" , link:"https://candicecity.com/31830/", cmmt:"", img:"https://candicecity.com/wp-content/uploads/2018/12/PA170022.jpg"},
+							{where: "", ctn: " 鬼山地獄:有可以泡溫泉的鱷魚。白池地獄:有白色結晶的溫泉。" , link:"", cmmt:"鬼山地獄永久關閉 17:00關閉", img:"https://candicecity.com/wp-content/uploads/2018/12/PA170018.jpg"},
+							{where: "地獄蒸工房鐵輪", ctn: "" , link:"https://drugs.pixnet.net/blog/post/30795913-%E3%80%90%E4%B9%9D%E5%B7%9E%E8%87%AA%E7%94%B1%E8%A1%8C%E3%80%91%E5%A4%A7%E5%88%86%E5%88%A5%E5%BA%9C%E5%9C%B0%E7%8D%84%E8%92%B8%E5%B7%A5%E6%88%BF%E9%90%B5%E8%BC%AA%EF%BC%8C%E7%94%A8", cmmt:"大重點！", img:"https://pic.pimg.tw/drugs/1472787275-1753668318.jpg"},
+							{where: "とよ常", ctn: "別府最好吃的天丼" , link:"https://tw.bring-you.info/toyotsune-beppu", cmmt:"可以先買", img:"https://tw.bring-you.info/imgs/2017/11/toyotsune-beppu-3.jpg"},
 						]
 					},
 				],
@@ -186,19 +204,23 @@ var app = new Vue({
 				date: "6/22",
 				wk: "（六）",
 				timetails: [
-					{ time: "08:00",sth: ["早餐"],cost: 700,},
-					{ time: "09:00",sth: ["出發往唐戶市場 ","Map Code︰16-743-384	"],cost: 0,},
+					{ time: "",sth: ["別府-1.5hr->","司門港-1hr->","博多"],cost: 0,},
+					{ time: "08:00",sth: ["早餐 700"],cost: "大分縣別府市風呂本5",},
+					{ time: "09:00",sth: ["出發往唐戶市場 ","Map Code︰16-743-384"],cost: "５-５０ 唐戸町 下関市 山口県 750-0005",},
 					{ time: "10:30",sth: ["市場旁邊停車場第一個小時免費，之後30分鐘/120日元	30"],cost: 0,},
 					{ time: "",sth: ["品嚐新鮮壽司"],cost: 1000,},
-					{ time: "11:30",sth: ["開車回司門港 九州鐵紀念館西停車場"],cost: 250,},
+					{ time: "11:30",sth: ["開車回司門港 九州鐵紀念館西停車場 250"],cost:  "〒801-0852 福岡県北九州市門司区港町９",},
 					{ time: "15:00",sth: ["開車到民宿"],cost: 0,},
 					{ time: "16:30",sth: ["放好行李後加油還車"],cost: 1500,},
 					{ time: "17:00",sth: ["前往吃飯地點","福岡博多串燒推介","https://tw.seeing-japan.com/7132"],cost: 3000,},
+					{ time: "飯店",sth: ["福岡県福岡市博多駅南 3 丁目 9-1 セレス Room no. 706"],cost: 0,},
 				],
 				plays: [
 					{
-						place: "",
+						place: "門司港",
 						views:[
+							{where: "唐戶市場", ctn: "" , link:"https://venuslin.tw/karatoichiba/", cmmt:"", img:"https://img.venuslin.tw/uploads/20181028060812_34.jpg"},
+							{where: "門司港懷舊區", ctn: "" , link:"https://tw.bring-you.info/mojiko-travel-guide", cmmt:"", img:"https://tw.bring-you.info/imgs/2018/04/Kokura-8.jpg"},
 							{where: "", ctn: "" , link:"", cmmt:"", img:""},
 						]
 					},
@@ -212,6 +234,10 @@ var app = new Vue({
 	},	
 	methods: {
 		changeDay: function(day){
+			if (day == 5) {
+				this.chosen = 5;
+				return;
+			}
 			if(day == this.chosen){
 				this.isDetail = !this.isDetail;
 			}else{

@@ -18,15 +18,19 @@
 				<button :class="['btn' ,(isDetail && chosen==2) ? 'btn-warning' : '',(chosen==2) ? 'btn-info' : 'btn-primary' ,'col-2']" @click="changeDay(2)">6/20</button>
 				<button :class="['btn' ,(isDetail && chosen==3) ? 'btn-warning' : '',(chosen==3) ? 'btn-info' : 'btn-primary' ,'col-2']" @click="changeDay(3)">6/21</button>
 				<button :class="['btn' ,(isDetail && chosen==4) ? 'btn-warning' : '',(chosen==4) ? 'btn-info' : 'btn-primary' ,'col-2']" @click="changeDay(4)">6/22</button>
-				<button class="btn btn-primary col-1">*</button>
+				<button class="btn btn-primary col-1" @click="changeDay(5)">*</button>
 			</div>
 			</div>
 			<br>
-			<div class="row">
-		
+			<div class="row" v-if="chosen == 5">
+				<div v-for="(mapimg, iin) in 6">
+					<img width="100%" :src="'./images/'+ iin +'.jpg'" alt="">
+					<br>
+					<br>
+				</div>
 
 			</div>
-			<div class="row content">
+			<div class="row content" v-else>
 				<div class="col-12" v-if="isDetail">
 					<!-- 細流 -->
 					<div class="row">
