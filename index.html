@@ -9,9 +9,8 @@
 
 <body>
 	<div id="app">
-			
-
 		<div class="container-fluid">
+			<div class="fix">
 			<h2>九州</h2>
 			<div class="row rh">
 				<button :class="['btn' ,(isDetail && chosen==0) ? 'btn-warning' : '',(chosen==0) ? 'btn-info' : 'btn-primary' ,'col-2']" @click="changeDay(0)">6/18</button>
@@ -20,6 +19,7 @@
 				<button :class="['btn' ,(isDetail && chosen==3) ? 'btn-warning' : '',(chosen==3) ? 'btn-info' : 'btn-primary' ,'col-2']" @click="changeDay(3)">6/21</button>
 				<button :class="['btn' ,(isDetail && chosen==4) ? 'btn-warning' : '',(chosen==4) ? 'btn-info' : 'btn-primary' ,'col-2']" @click="changeDay(4)">6/22</button>
 				<button class="btn btn-primary col-1">*</button>
+			</div>
 			</div>
 			<br>
 			<div class="row">
